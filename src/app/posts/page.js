@@ -1,9 +1,9 @@
 import { db } from "@/lib/db.js";
 import Link from "next/link";
 
-export default async function HomePage() {
+export default async function PostPage() {
   const result = await db.query(`SELECT * FROM POSTS`);
-  const posts = result.rows;
+  const post = result.rows;
 
   return (
     <div>
